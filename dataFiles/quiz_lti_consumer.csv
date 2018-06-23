@@ -1,0 +1,2 @@
+consumer_key,name,secret,lti_version,consumer_name,consumer_version,consumer_guid,css_path,protected,enabled,enable_from,enable_until,last_access,created,updated
+moodle-prepost,Moodle PrePost,EqOtPHhS2evS0b4ZKxl6SZVmmY31eI0i,LTI-1p0,Christopher,Christopher1.1,chris.1.31463.awesome,NULL,0,1,NULL,NULL,10/17/2017,11/17/2015 21:34,10/17/2017 18:27

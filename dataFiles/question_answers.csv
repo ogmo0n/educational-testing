@@ -1,0 +1,97 @@
+answerId,quesNumb,answer,fraction
+11851,3265,A,0
+11852,3265,B,0
+11853,3265,C ,1
+11854,3265,D,0
+11855,3266,164,0
+11856,3266,64,0
+11857,3266,128,1
+11858,3266,96,0
+11859,3267,Meal Plan,0
+11860,3267,Menu Pattern,1
+11861,3267,Static Menu,0
+11862,3267,Selective Menu,0
+11863,3268,Temporary Menu,0
+11864,3268,Interval Menu,0
+11865,3268,Cycle Menu,1
+11866,3268,Selective Menu,0
+11867,3269,Beginning Inventory (BI) &amp;#8211; Purchases (P) + Ending Inventory (EI) = Food Cost,0
+11868,3269,Beginning Inventory (BI) + Purchases (P) + Ending Inventory (EI) = Food Cost ,0
+11869,3269,Beginning Inventory (BI) + Purchases (P) - Ending Inventory (EI) = Food Cost ,1
+11870,3269,Beginning Inventory (BI) &amp;#8211; Purchases (P) - Ending Inventory (EI) = Food Cost ,0
+11871,3270,Balance Sheet,0
+11872,3270,Budget,1
+11873,3270,P &amp;amp; L,0
+11874,3270,Break even analysis,0
+11875,3271,The McDonald Brothers -McDonald&amp;#8217;s Restaurants,0
+11876,3271,"Ray Kroc, -McDonald&amp;#8217;s Restaurants",0
+11877,3271,Carl Karcher -Carl&amp;#8217;s Jr.,0
+11878,3271,Walter Anderson and Billy Ingram -White Castle,1
+11879,3272,Purchase Orders,1
+11880,3272,Invoices,0
+11881,3272,Specifications,0
+11882,3272,Competitive Bids,0
+11883,3273,Less than 70 Degrees F,1
+11884,3273,More than 70 degrees F,0
+11885,3273,Between 40 and 140 degrees F,0
+11886,3273,Temperature is not important in dry storage.,0
+11887,3274,Caveat Emptor,0
+11888,3274,FIFO,1
+11889,3274,FILO,0
+11890,3274,Par Stock,0
+11891,3275,The buyer,1
+11892,3275,The regulator,0
+11893,3275,The vendor,0
+11894,3275,The Producer,0
+11895,3276,Management information system,0
+11896,3276,Standing plan,0
+11897,3276,Strategic plan,1
+11898,3276,Policy and procedure,0
+11899,3277,MIS,0
+11900,3277,TQM,1
+11901,3277,PERT,0
+11902,3277,QVST,0
+11903,3278,"Establishment of goals, objectives, and standards",0
+11904,3278,"Purchase of food, equipment, and supplies according to specification.",0
+11905,3278,Financial planning and control,0
+11906,3278,All of these are common functions of management.,1
+11907,3279,TQM,0
+11908,3279,QWL,1
+11909,3279,Work design,0
+11910,3279,Theory X,0
+11911,3280,Organizational chart,0
+11912,3280,Job description,1
+11913,3280,Work schedule,0
+11914,3280,Skills matrix system,0
+11915,3281,Portion size,0
+11916,3281,Cooking time,0
+11917,3281,Ingredient source,1
+11918,3281,Recipe title,0
+11919,3282,Enhance aesthetic appeal,0
+11920,3282,Destroy harmful organisms,0
+11921,3282,Minimize nutrient retention,1
+11922,3282,Improve digestibility,0
+11923,3283,The market,0
+11924,3283,HACCP,0
+11925,3283,Purchasing,1
+11926,3283,Receiving,0
+11927,3284,41 to 135 degrees Centigrade,1
+11928,3284,40 to 140 degrees Fahrenheit,0
+11929,3284,0 to 100 degrees Centigrade,0
+11930,3284,32 to 212 degrees Fahrenheit,0
+11931,3285,Cook/chill,0
+11932,3285,Conventional,0
+11933,3285,Assembly/serve,1
+11934,3285,Commissary,0
+11935,3286,Team,0
+11936,3286,System,1
+11937,3286,Collective,0
+11938,3286,Cluster,0
+11939,3287,National School Lunch Act of 1946,1
+11940,3287,School Nutrition Reform Act of 1997,0
+11941,3287,Childhood Nutrition Act of 2001,0
+11942,3287,American School Lunch Act of 1938,0
+11943,3288,TRUE,0
+11944,3288,FALSE,1
+11945,3289,TRUE,1
+11946,3289,FALSE,0

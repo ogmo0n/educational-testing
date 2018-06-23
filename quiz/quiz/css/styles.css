@@ -1,0 +1,144 @@
+/*
+ *  Student Test Stylesheet
+ *  Copyright (C) 2018  Christopher Odden
+ *
+ *  Contact: chrodd9604@students.ecpi.edu
+ *
+ * 
+ * 
+*/
+
+/*
+ * This page provides the necessary styling for updated student tests.
+ */
+
+sup { 
+    vertical-align: super;
+    font-size: smaller;
+}
+body {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+.grade {
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: .5em;
+}
+table {
+	border-collapse: collapse;
+	border: solid 1px #a6aab2;
+	padding: 1em;
+	margin: 2em auto .5em auto;
+	width: 50em;
+}
+th {
+	border: solid 1px #a6aab2;
+	padding: .6em .6em .6em 1em;
+	text-align: left;
+	background-color: #f5f5f5;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #4C5860;
+}
+.total {
+	font-size: .95em;
+	font-weight: 600;
+	color: #899399;
+}
+td, tr {
+	padding-top: .75em;
+	padding-left: 1.2em;
+	padding-right: 1em;
+}
+hr {
+	height: 1px;
+    border: none;
+    border-top: 1px solid #d6d6d6;
+    margin: 0;
+    padding: 0; 
+}
+.number {}
+.question {
+	font-size: 1rem;
+	color: #4C5860;
+	padding-top: 1.5em;
+	padding-bottom: .75em;
+}
+.answer {
+	font-size: .875rem;
+	color: #4C5860;
+	padding-left: 2em;
+}
+input[type="radio"] {
+	margin: 3px 5px 0px 5px;
+}
+#previous[disabled], #next[disabled], #submit[disabled] {
+    color: graytext;
+    cursor: initial;
+}
+/*.buttons input[type="submit"]:hover:not(:disabled) {
+	text-decoration: none;
+	background: #e8e8e8;
+    color: #2D3B45;
+}*/
+#previous:hover:not(:disabled), #next:hover:not(:disabled) {
+	text-decoration: none;
+	background: #e8e8e8;
+    color: #2D3B45;
+}
+#submit:hover:not(:disabled){
+	text-decoration: none;
+	border-color: #0079C1;
+	background: #008EE2;
+    color: #fff;
+}
+input[type="submit"] {
+	padding: .55em .85em .55em .85em;
+	font-size: 1rem;
+	color: #4C5860;
+	background-color: #f5f5f5;
+	border: solid 1px #C7CDD1;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 20px;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+}
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	/*text-align: center;*/
+	width: 50em;
+	/*margin: 2em auto 2em auto;*/
+	margin:auto;
+}
+.box {
+	display: flex;
+	border-collapse: collapse;
+	border: solid 1px #a6aab2;
+	padding: .625em .625em .6875em .625em;
+	width: 54.4em;
+	margin: auto;
+	/* NO overflow on left side is pushing container right on small screens*/
+	/* might need to add media queries */
+}
+#previous, #next {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+#submit {
+	/*margin-top: .7em;*/
+	/*margin-right: -2.2em;*/
+	margin-left: auto;
+}
+#submit.summit {
+	text-decoration: none;
+	border-color: #0079C1;
+	background: #008EE2;
+    color: #fff;
+} 
