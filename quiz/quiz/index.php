@@ -435,9 +435,8 @@ if ($action == 'print_test1') {
 			 * and move to individual array position.
 			 */
 			if (array_key_exists('individual', $_POST)) {
-				// $_SESSION['count'] = $_REQUEST['individual']; // array index by count
 				$_SESSION['count'] = $num; // array index by count
-				$quesNumb = $_SESSION['numbers'][$_REQUEST['individual']]; // I don't think this does anything ******
+				$quesNumb = $_SESSION['numbers'][$_REQUEST['individual']];
 			}
 
 			/**
@@ -456,7 +455,7 @@ if ($action == 'print_test1') {
 			 * Determine if question contains an image. If so, retrieve it.
 			 */
 			if (strlen($_SESSION['questions'][$_SESSION['count']]['qpic']) > 1) { 
-				$image = '<img src="https://test.ecpi.net/pretest/'.$_SESSION['questions'][$_SESSION['count']]['qpic'].'" alt="'.$_SESSION['questions'][$_SESSION['count']]['qalt'].'" /><br />'; // add URL for src like <img src="https://test.school.net/pretest/'.$_SESSION[]"
+				$image = '<img src="'.$_SESSION['questions'][$_SESSION['count']]['qpic'].'" alt="'.$_SESSION['questions'][$_SESSION['count']]['qalt'].'" /><br />'; // add URL for src like <img src="https://test.school.net/pretest/'.$_SESSION[]"
 			} else {
 				$image = '';
 			}
@@ -522,9 +521,7 @@ if ($action == 'print_test1') {
 		    } else {
 		    	$unanswered = array_count_values($_SESSION['arrQuestion'])[0];
 		    }
-// write code to find the closest '0' value to current question in
-// arrQuestion to appropriately highlight next/previous button
-echo "<br>Quest: {$Quest}<br>";
+			
 		    /**
 			 * HTML and JavaScript String Variables
 			 */
@@ -621,22 +618,6 @@ echo "<br>Quest: {$Quest}<br>";
 		    $index = array_keys($_SESSION['arrQuestion'], 0); // The index compares to $_SESSION['count']
 
 		    $indexFlag = array_keys($_SESSION['flagged'], 1);
-
-// index array has question number as value
-// arrQuestion array has question number as key
-echo "array_diff: "; print_r(array_diff(array_keys($_SESSION['arrQuestion']), array_values($index)));
-
-/*test*///echo "<br><br>Numbers Array: ";
-/*test*///print_r($_SESSION['numbers']);
-/*test*/echo "<br><br>Index Array: ";
-/*test*/print_r($index);
-/*test*/echo "<br><br>Request: ";
-/*test*/print_r($_REQUEST);
-/*test*/echo "<br>Request['id']: {$_REQUEST['id']}<br>arrQuestion: ";
-/*test*/print_r($_SESSION['arrQuestion']);
-/*test*/echo "<br>Count: {$_SESSION['count']}<br><br>Flagged: ";
-/*test*/print_r($_SESSION['flagged']);
-
 		    $questCount = 0;
 		    $page .= "
 		    	<div class='window-wrapper'>
