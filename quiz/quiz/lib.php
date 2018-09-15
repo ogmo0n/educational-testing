@@ -12,14 +12,14 @@
 /*
  * This page provides general functions to support the application.
 //  */
-// session_unset();
-  ini_set('session.gc_maxlifetime', 8*60*60); //sets the sessin length to 4 hours
+// session_destroy();
+  ini_set('session.gc_maxlifetime', 8*60*60); //sets the session length to 4 hours
   require_once('db.php');
   //require_once ('/var/www/lib/mail/class.email.php'); // for linux
   require_once('class.email.php');
 
 ###  Uncomment the next line to log error messages
-//  error_reporting(E_ALL);
+ error_reporting(E_ERROR);
 
 ###
 ###  Initialise application session and database connection
@@ -216,7 +216,7 @@ EOD;
     if ($attemptId == 0 || !isset($attemptId)){ 
         $attemptId = 0;
         $count = 0;
-        $errors = "errors.log";
+        $errors = "errors.log"; // removed from error_log
         // $errors = "/var/log/PrePost/errors.log";
         while($attemptId == 0 && $count < 5){
             $attemptId = getAttemptIdQuizStart($db, $username, $type, $courseId, $consumer_key, $resource_id );
@@ -392,12 +392,18 @@ EOD;
 ###
 function updateQuizGrade($db, $grade, $attemptId) {
     $request='';
+    // echo "<br>Request: ";
+    // print_r($_REQUEST);
         foreach ($_REQUEST as $keys => $values) {
             $request .= "{$keys} = {$values} <br />";
         }
         $session='';
         foreach ($_SESSION as $keys => $values) {
             $session .= "{$keys} = {$values} <br />";
+            // echo "<br>Keys: ";
+            // print_r($keys);
+            // echo "<br>Values: ";
+            // print_r($values);
         }
         $server='';
         foreach ($_SERVER as $keys => $values) {
@@ -411,7 +417,7 @@ function updateQuizGrade($db, $grade, $attemptId) {
         Email::mail($subject, $message, $to);
     } 
     
-    error_log("(lib.php-updateQuizGrade:1) ".date('Y-m-d:H.i.s')." username=".$_SESSION['username']." type=".$_SESSION['type']." grade=".$grade." attemptId=".$attemptId." courseCode=".$_SESSION['courseCode']." \n", 3, "/var/log/PrePost/errors.log"); 
+    error_log("(lib.php-updateQuizGrade:1) ".date('Y-m-d:H.i.s')." username=".$_SESSION['username']." type=".$_SESSION['type']." grade=".$grade." attemptId=".$attemptId." courseCode=".$_SESSION['courseCode']." \n", 3, "errors.log"); 
     $sql = <<< EOD
      UPDATE quiz_attempt          
      SET grade = :grade

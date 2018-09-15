@@ -49,8 +49,8 @@
   define('DB_TABLENAME_PREFIX', 'quiz_');
 	*/
  
-	define('DB_NAME', '');  // e.g. 'mysql:dbname=MyDb;host=localhost' or 'sqlite:php-rating.sqlitedb'
-	define('DB_USERNAME', '');
+	define('DB_NAME', 'mysql:dbname=quizdb;host=localhost');  // e.g. 'mysql:dbname=MyDb;host=localhost' or 'sqlite:php-rating.sqlitedb'
+	define('DB_USERNAME', 'root');
 	define('DB_PASSWORD', '');
 	define('DB_TABLENAME_PREFIX', 'quiz_');
   
