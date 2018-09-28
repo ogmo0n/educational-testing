@@ -7,7 +7,7 @@
  *
  *  Updated with pagination in March 2018 
  *    by Christopher Odden
- *  Modified in July 2018 
+ *  Modified in July - September 2018 
  *    by Christopher Odden
  *  Contact: chrodd9604@students.ecpi.edu
  * 
@@ -164,7 +164,7 @@ if ($ok) {
 		recordQuizCompletion($db, $attemptId);
 		error_log("(index.php-grade  action:1) ".date('Y-m-d:H.i.s')." username=".$_SESSION['username']." type=".$_SESSION['type']." course_SISID=".$_SESSION['course_SISID']." courseCode=".$_SESSION['courseCode']." attemptId=".$attemptId." action=".$action." REQUEST=".$_REQUEST['grade']."\n", 3, "errors.log");
 		$pointsEarned = 0;
-		print_r($_SESSION['arrQuestion']);
+		//print_r($_SESSION['arrQuestion']);
 		foreach ($_SESSION['arrQuestion'] as $questionNumb => $answerId) {
 			$answerId = str_replace(' ', '', $answerId);
 			$questionNumb = str_replace(' ','', $questionNumb);
@@ -254,27 +254,13 @@ $page = <<< EOD
 <head>
 <meta http-equiv="content-language" content="EN" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title>{$title}</title>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/no.inline.js"></script>
+<script type="text/javascript" src="js/no.inline.min.js"></script>
 <script type="text/javascript" src="js/jquery.rateit.min.js"></script>
 <script type="text/javascript">
-	// disable refresh - messages no longer work in modern browsers
-	var needToConfirm = true;
-	window.onbeforeunload = function(e) {
-		if (needToConfirm) {
-			e.preventDefault;
-			return 'You will receive a 0% for your test if you exit without submitting.';
-		}
-	}
-	window.beforeunload = function(e) {
-		if (needToConfirm) {
-			e.preventDefault;
-			return 'You will receive a 0% for your test if you exit without submitting.';
-		}
-	}
-
 	// disable back button
 	history.pushState(null, null, document.URL);
 	window.addEventListener('popstate', function () {
@@ -298,7 +284,7 @@ $page = <<< EOD
 		}
 	}
 </script>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/styles.min.css">
 <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
@@ -437,7 +423,6 @@ if ($action == 'print_test1') {
 			if (array_key_exists('individual', $_POST)) {
 				$_SESSION['count'] = $num; // array index by count
 				$quesNumb = $_SESSION['numbers'][$_REQUEST['individual']];
-			}
 
 			/**
 			 * If user has 'flagged' a question, 
@@ -521,7 +506,7 @@ if ($action == 'print_test1') {
 		    } else {
 		    	$unanswered = array_count_values($_SESSION['arrQuestion'])[0];
 		    }
-			
+
 		    /**
 			 * HTML and JavaScript String Variables
 			 */
@@ -532,9 +517,9 @@ if ($action == 'print_test1') {
 		    $js_submitBtnColor = "<script type='text/javascript'>window.onload = function(){submitBtnColor();};</script>";
 			$hiddenInput = "</table></div><input type='hidden' name='attemptId' value='{$_SESSION['attemptId']}' />";
 			$divClassButtons = "<div class='buttons'>";
-			$prevBtn = "<input type='submit' id='previous' class='previous' value='&#9666 Previous' name='previous' onclick='needToConfirm=false;'/>";
+			$prevBtn = "<input type='submit' id='previous' class='previous' value='&#9666 Previous' name='previous'/>";
 			$disabledPrevBtn = "<input type='submit' id='previous' class='previous' value='&#9666 Previous' name='previous' disabled/>";
-			$nextBtn = "<input type='submit' id='next' class='next' value='Next &#9656' name='next' onclick='needToConfirm=false;'/>";
+			$nextBtn = "<input type='submit' id='next' class='next' value='Next &#9656' name='next'/>";
 			$disabledNextBtn = "<input type='submit' id='next' class='next' value='Next &#9656' name='next' disabled/>";
 			$closingDivTag = "</div>";
 			$divClassBox = "<div class='box'>";
@@ -617,6 +602,7 @@ if ($action == 'print_test1') {
 		    // Add unanswered questions to array where key equals index.
 		    $index = array_keys($_SESSION['arrQuestion'], 0); // The index compares to $_SESSION['count']
 
+		    // Add flagged questions to array where key equals index.
 		    $indexFlag = array_keys($_SESSION['flagged'], 1);
 		    $questCount = 0;
 		    $page .= "
@@ -642,9 +628,9 @@ if ($action == 'print_test1') {
 
 	    		if ($_SESSION['questions'][$questCount]['quesNumb'] == $_SESSION['questions'][$_SESSION['count']]['quesNumb']) {
 	    			// make 'current question' bold
-	    			$page .= " currentQuestion' aria-hidden='true' onclick='needToConfirm=false;'/></li>";
+	    			$page .= " currentQuestion' aria-hidden='true'/></li>";
 		    	} else {
-		    		$page .= "' aria-hidden='true' onclick='needToConfirm=false;'/></li>";
+		    		$page .= "' aria-hidden='true'/></li>";
 		    	}
 			    $questCount++;
 		    }
