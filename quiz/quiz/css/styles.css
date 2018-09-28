@@ -263,8 +263,8 @@ input.flag-question[type="checkbox"]:checked {
 	margin-left: auto;
 }
 #previous[disabled], #next[disabled], #submit[disabled] {
-    	color: #D3D3D3;
-    	cursor: initial;
+    color: #D3D3D3;
+    cursor: initial;
 }
 .previous:hover:not(:disabled), .next:hover:not(:disabled) {
 	background: #e8e8e8;
@@ -316,8 +316,8 @@ input.flag-question[type="checkbox"]:checked {
 		font-size: .85rem;
  	}
  	.window-wrapper {
-    		margin: 0 0 1em 2%;
-    		padding-bottom: 30px;
+    	margin: 0 0 1em 2%;
+    	padding-bottom: 30px;
  	}
  	#aside_questions {
 		font-size: 1.5em;
@@ -386,8 +386,8 @@ input.flag-question[type="checkbox"]:checked {
  		padding-right: 2em;
  	}
  	.window-wrapper {
-	    	margin: 1em 0;
-	    	padding-left: 0;
+    	margin: 1em 0;
+    	padding-left: 0;
  	}
 	#question_list {
 		height: 216px;
