@@ -423,6 +423,7 @@ if ($action == 'print_test1') {
 			if (array_key_exists('individual', $_POST)) {
 				$_SESSION['count'] = $num; // array index by count
 				$quesNumb = $_SESSION['numbers'][$_REQUEST['individual']];
+			}
 
 			/**
 			 * If user has 'flagged' a question, 
