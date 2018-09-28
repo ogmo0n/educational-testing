@@ -112,9 +112,6 @@ input[type="submit"] {
  * Section for question window
  */
 .window-wrapper {
-   /* -webkit-flex: 0 0 350px;
-    -ms-flex: 0 0 350px;
-    flex: 0 0 350px;*/
     box-sizing: border-box;
     min-width: 1px;
     padding: 24px;
@@ -127,8 +124,6 @@ input[type="submit"] {
 .inner-container {
     box-sizing: border-box;
 	height: 135px;
-	/*min-width: 200px;*/
-	/*max-height: 200px;*/
 	position: relative;
 	z-index: 10;
 }
@@ -141,36 +136,34 @@ input[type="submit"] {
 }
 #question_list {
 	height: 120px;
-	/*overflow-x: hidden;
-	overflow-y: scroll;*/
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	list-style-type: none;
-    margin: 0 0 13px;
-    padding: 0 0 1px 20px;
-    position: absolute;
+    	margin: 0 0 13px;
+    	padding: 0 0 1px 20px;
+    	position: absolute;
  	min-width: 10em;
 }
+/* Uncomment below if scrollbar is not desired */
 /*#question_list::-webkit-scrollbar {
 	display: none;
 }*/
 #question_list li i.fa {
 	color: #595959; /* charcoal */
 	margin-right: 4px;
-    display: inline-block;
-    font-style: normal;
-    line-height: 1;
+    	display: inline-block;
+   	font-style: normal;
+   	line-height: 1;
 }
 .icon {
 	color: #0D4BA0 !important; /*darker blue*/
-    display: inline-block;
-    vertical-align: bottom;
-    line-height: 1;
+    	display: inline-block;
+    	vertical-align: bottom;
+    	line-height: 1;
 	font-size: .875rem; /* 14px */
-    text-decoration: none !important;
-    text-rendering: optimizeLegibility;
+    	text-decoration: none !important;
+    	text-rendering: optimizeLegibility;
 	text-transform: none !important;
-	/*font-weight: normal;*/
 	/* Properties to remove button styling */
 		background: none!important;
 		border: none !important; 
@@ -199,14 +192,14 @@ input[type="submit"] {
  */
 input.flag-question[type="checkbox"] {
 	-webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    	-moz-appearance: none;
+    	appearance: none;
 	background: url(../images/answers_sprite.png) -48px top;
-    cursor: pointer;
-    position: absolute;
+    	cursor: pointer;
+    	position: absolute;
 	margin: 3.5em 1em 0 0;
-    height: 16px;
-    width: 20px;
+    	height: 16px;
+    	width: 20px;
 }
 input.flag-question[type="checkbox"]:checked {
 	background-position: -48px -17px;
@@ -214,10 +207,9 @@ input.flag-question[type="checkbox"]:checked {
 .small-flag {
 	display: inline-block;
 	background: url(../images/flagged_question.png) no-repeat;
-	/*position: absolute;*/
-    height: 8px;
-    width: 10px;
-    padding: 0 4px 4px 0;
+    	height: 8px;
+    	width: 10px;
+    	padding: 0 4px 4px 0;
 }
 .invisible {
 	visibility: hidden !important;
@@ -230,8 +222,6 @@ input.flag-question[type="checkbox"]:checked {
 .buttons {
 	display: flex;
 	justify-content: space-between;
-	/*width: 50em;*/
-	/*margin: 2em auto 2em auto;*/
 	margin:auto;
 	margin-left: 2em;
 	min-width: 90%;
@@ -256,30 +246,28 @@ input.flag-question[type="checkbox"]:checked {
 	margin-bottom: 2em;
 }
 .submit {
-	/*margin-top: .7em;*/
-	/*margin-right: -2.2em;*/
 	margin-left: auto;
 }
 #previous[disabled], #next[disabled], #submit[disabled] {
-    color: #D3D3D3;
-    cursor: initial;
+    	color: #D3D3D3;
+    	cursor: initial;
 }
 .previous:hover:not(:disabled), .next:hover:not(:disabled) {
 	text-decoration: none;
 	background: #e8e8e8;
-    color: #2D3B45;
+    	color: #2D3B45;
 }
 .submit:hover:not(:disabled){
 	text-decoration: none;
 	border-color: #0079C1;
 	background: #008EE2;
-    color: #fff;
+    	color: #fff;
 }
 .next.btnColor, .previous.btnColor, .submit.submitBtnColor {
 	text-decoration: none;
 	border-color: #0079C1;
 	background: #008EE2;
-    color: #fff;
+    	color: #fff;
 }
 
 
@@ -289,12 +277,6 @@ input.flag-question[type="checkbox"]:checked {
 
  /* * *      > 800px         * * */
  @media only screen and (min-width: 800px) {
- 	/*.my-form,
- 	.second-container,
- 	.window-wrapper {
- 		display: flex;
- 		flex-direction: column;
- 	}*/
  	td, tr {
 		padding-top: .75em;
  	}
@@ -314,15 +296,14 @@ input.flag-question[type="checkbox"]:checked {
  		padding-left: 2em;
  	}
  	.box {
- 		/*max-width: 54em; /* 54.4em */
 		padding: .625em .625em .6875em .625em;
  	}
  	.prompt {
 		font-size: .85rem;
  	}
  	.window-wrapper {
-    	margin: 0 0 1em 2%;
-    	padding-bottom: 30px;
+    		margin: 0 0 1em 2%;
+    		padding-bottom: 30px;
  	}
  	#aside_questions {
 		font-size: 1.5em;
@@ -388,11 +369,11 @@ input.flag-question[type="checkbox"]:checked {
  	.question-container {
  		margin-right: 0;
  		padding-right: 2em;
-	    max-width: 53.5em;
+	    	max-width: 53.5em;
  	}
  	.window-wrapper {
-	    margin: 1em 0;
-	    padding-left: 0;
+	    	margin: 1em 0;
+	    	padding-left: 0;
  	}
 	#question_list {
 		height: 216px;
