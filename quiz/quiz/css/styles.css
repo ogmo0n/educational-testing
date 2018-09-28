@@ -1,9 +1,13 @@
 /*
  *  Student Test Stylesheet
- *  Copyright (C) 2018  Christopher Odden
+ *  Copyright (C) 2018 Christopher Odden
  *
  *  Contact: chrodd9604@students.ecpi.edu
  *
+ *  Updated with media queries September 2018
+ *     by Christopher Odden
+ *  Alphabetized on 9/28/2018
+ *     by Christopher Odden
  * 
  * 
 */
@@ -18,13 +22,16 @@ sup {
 }
 body {
 	font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
-	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	line-height: 1.5;
 }
 .grade {
-	border-collapse: collapse;
 	border: 1px solid black;
+	border-collapse: collapse;
 	padding: .5em;
 }
 .main-content {
@@ -36,48 +43,45 @@ body {
 	margin-right: 1em;
 }
 .question-container {
-	padding: 0 16px; /*was just 16px*/
  	margin-right: 1em;
     min-height: 225px;
+	padding: 0 16px;
 }
 .input-table-container {
 	display: flex;
 	flex-direction: row;
 }
 table {
-	border-collapse: collapse;
 	border: solid 1px #a6aab2;
-	padding: 1em;
+	border-collapse: collapse;
 	margin: 2em 0 .5em 2em;
+	padding: 1em;
 	width: 100%;
 }
 th {
-	border: solid 1px #a6aab2;
-	padding: .6em .6em .6em 1em;
-	text-align: left;
 	background-color: #f5f5f5;
+	border: solid 1px #a6aab2;
 	font-size: 1.2em;
 	font-weight: bold;
 	color: #4C5860;
+	padding: .6em .6em .6em 1em;
+	text-align: left;
 }
 .total {
+	color: #899399;
 	font-size: .95em;
 	font-weight: 600;
-	color: #899399;
 }
 td, tr {
-	padding-top: .625em;
-	padding-left: 1.2em;
-	padding-right: 1em;
+	padding: .625em 1em 0 1.2em;
 }
 hr {
-	height: 1px;
     border: none;
     border-top: 1px solid #d6d6d6;
+	height: 1px;
     margin: 0;
     padding: 0; 
 }
-.number {}
 .question {
 	color: #4C5860;
 	font-size: .875rem; /* 14px */
@@ -90,20 +94,22 @@ hr {
 	padding-left: 1.5em;
 }
 input[type="radio"] {
-	margin: 3px 5px 0px 5px;
+	margin: 3px 5px 0 5px;
 }
 input[type="submit"] {
-	padding: .55em .85em .55em .85em;
-	font-size: .875rem;
-	color: #4C5860;
 	background-color: #f5f5f5;
 	border: solid 1px #C7CDD1;
 	border-radius: 3px;
-	text-align: center;
+	color: #4C5860;
 	cursor: pointer;
+	font-size: .875rem;
 	line-height: 20px;
+	padding: .55em .85em .55em .85em;
+	text-align: center;
 	-webkit-transition: background-color 0.2s ease-in-out;
 	-moz-transition: background-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
 }
 
@@ -112,77 +118,76 @@ input[type="submit"] {
  * Section for question window
  */
 .window-wrapper {
-   /* -webkit-flex: 0 0 350px;
-    -ms-flex: 0 0 350px;
-    flex: 0 0 350px;*/
     box-sizing: border-box;
+    margin: 0 0 1em 2em;
     min-width: 1px;
+    overflow: hidden;
     padding: 24px;
     position: relative;
-    overflow: hidden;
-    margin: 0 0 1em 2em;
-    width: 17em;
     -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    width: 17em;
 }
 .inner-container {
     box-sizing: border-box;
 	height: 135px;
-	/*min-width: 200px;*/
-	/*max-height: 200px;*/
 	position: relative;
 	z-index: 10;
 }
 #aside_questions {
-	font-weight: normal;
-	line-height: 1.5;
 	color: #4C5860;
 	font-size: 1.3125em;
+	font-weight: normal;
+	line-height: 1.5;
 	margin: 0 0 .35em 0;
 }
 #question_list {
 	height: 120px;
-	/*overflow-x: hidden;
-	overflow-y: scroll;*/
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
 	list-style-type: none;
     margin: 0 0 13px;
+ 	min-width: 10em;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	-moz-overflow-scrolling: touch;
+	-ms-overflow-scrolling: touch;
+	-o-overflow-scrolling: touch;
     padding: 0 0 1px 20px;
     position: absolute;
- 	min-width: 10em;
 }
+/* Uncomment to remove scrollbar */
 /*#question_list::-webkit-scrollbar {
 	display: none;
 }*/
 #question_list li i.fa {
 	color: #595959; /* charcoal */
-	margin-right: 4px;
     display: inline-block;
     font-style: normal;
     line-height: 1;
+	margin-right: 4px;
 }
 .icon {
 	color: #0D4BA0 !important; /*darker blue*/
+	background: none!important; /* remove button styling */
+	border: none !important; /* remove button styling */
+	cursor: pointer; /* remove button styling */
     display: inline-block;
-    vertical-align: bottom;
-    line-height: 1;
+	font: inherit; /* remove button styling */
 	font-size: .875rem; /* 14px */
+    line-height: 1;
+	padding: 0 !important; /* remove button styling */
     text-decoration: none !important;
     text-rendering: optimizeLegibility;
 	text-transform: none !important;
-	/*font-weight: normal;*/
-	/* Properties to remove button styling */
-		background: none!important;
-		border: none !important; 
-		padding: 0 !important;
-		font: inherit;
-		cursor: pointer;
+    vertical-align: bottom;
 }
 .icon:hover,
 .icon.answered.currentQuestion:hover {
+    color: #2D3B45 !important; /*charcoal*/
     cursor: pointer;
     text-decoration: underline !important;
-    color: #2D3B45 !important; /*charcoal*/
 }
 .answered, 
 .answered:hover {
@@ -200,24 +205,25 @@ input[type="submit"] {
 input.flag-question[type="checkbox"] {
 	-webkit-appearance: none;
     -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     appearance: none;
 	background: url(../images/answers_sprite.png) -48px top;
     cursor: pointer;
-    position: absolute;
-	margin: 3.5em 1em 0 0;
     height: 16px;
+	margin: 3.5em 1em 0 0;
+    position: absolute;
     width: 20px;
 }
 input.flag-question[type="checkbox"]:checked {
 	background-position: -48px -17px;
 }
 .small-flag {
-	display: inline-block;
 	background: url(../images/flagged_question.png) no-repeat;
-	/*position: absolute;*/
+	display: inline-block;
     height: 8px;
-    width: 10px;
     padding: 0 4px 4px 0;
+    width: 10px;
 }
 .invisible {
 	visibility: hidden !important;
@@ -230,34 +236,30 @@ input.flag-question[type="checkbox"]:checked {
 .buttons {
 	display: flex;
 	justify-content: space-between;
-	/*width: 50em;*/
-	/*margin: 2em auto 2em auto;*/
 	margin:auto;
 	margin-left: 2em;
 	min-width: 90%;
 }
 .box {
-	display: flex;
-	border-collapse: collapse;
 	border: solid 1px #a6aab2;
+	border-collapse: collapse;
+	display: flex;
 	margin: auto auto auto 1em;
-	padding: .5em .5em .5625em .5em;
 	min-width: 91.912%;
+	padding: .5em .5em .5625em .5em;
 }
 .prompt {
+	color: graytext;
+	font-size: .78125rem;
+	line-height: 39.59px;
 	margin-left: 2.4rem;
 	text-align: center;
-	line-height: 39.59px;
-	font-size: .78125rem;
-	color: graytext;
 }
 .previous, .next {
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
 .submit {
-	/*margin-top: .7em;*/
-	/*margin-right: -2.2em;*/
 	margin-left: auto;
 }
 #previous[disabled], #next[disabled], #submit[disabled] {
@@ -265,21 +267,21 @@ input.flag-question[type="checkbox"]:checked {
     cursor: initial;
 }
 .previous:hover:not(:disabled), .next:hover:not(:disabled) {
-	text-decoration: none;
 	background: #e8e8e8;
     color: #2D3B45;
+	text-decoration: none;
 }
 .submit:hover:not(:disabled){
-	text-decoration: none;
-	border-color: #0079C1;
 	background: #008EE2;
+	border-color: #0079C1;
     color: #fff;
+	text-decoration: none;
 }
 .next.btnColor, .previous.btnColor, .submit.submitBtnColor {
-	text-decoration: none;
-	border-color: #0079C1;
 	background: #008EE2;
+	border-color: #0079C1;
     color: #fff;
+	text-decoration: none;
 }
 
 
@@ -289,12 +291,6 @@ input.flag-question[type="checkbox"]:checked {
 
  /* * *      > 800px         * * */
  @media only screen and (min-width: 800px) {
- 	/*.my-form,
- 	.second-container,
- 	.window-wrapper {
- 		display: flex;
- 		flex-direction: column;
- 	}*/
  	td, tr {
 		padding-top: .75em;
  	}
@@ -314,7 +310,6 @@ input.flag-question[type="checkbox"]:checked {
  		padding-left: 2em;
  	}
  	.box {
- 		/*max-width: 54em; /* 54.4em */
 		padding: .625em .625em .6875em .625em;
  	}
  	.prompt {
@@ -337,8 +332,8 @@ input.flag-question[type="checkbox"]:checked {
  /* * *      > 950px         * * */ 
  @media only screen and (min-width: 950px) {
  	.second-container {
- 		min-width: 54.4em;
  		margin: auto;
+ 		min-width: 54.4em;
  	}
  	.window-wrapper {
  		margin-left: 5%;
@@ -381,14 +376,14 @@ input.flag-question[type="checkbox"]:checked {
  		width: 1125px;
  	}
  	.second-container {
+ 		align-items: center;
  		margin-right: 0;
  		padding-left: 1%;
- 		align-items: center;
  	}
  	.question-container {
  		margin-right: 0;
- 		padding-right: 2em;
 	    max-width: 53.5em;
+ 		padding-right: 2em;
  	}
  	.window-wrapper {
 	    margin: 1em 0;
@@ -408,21 +403,6 @@ input.flag-question[type="checkbox"]:checked {
  /* * *      > 1350px         * * */
  @media only screen and (min-width: 1350px) {
  	.main-content, .my-form {
- 		margin-left: auto;
- 		margin-right: auto;
+ 		margin: auto;
  	}
  }
-
-/* CURRENT LAYOUT TIERS */
-/*
-	A) main-content div {
-		I) .my-form
-		II) div.second-container {
-			a) div.question-container {
-				1) div.input-table-container {}
-				2) div.buttons {}
-			}
-			b) div.box {}
-		}
-		III) div.window-wrapper {}
-	}
