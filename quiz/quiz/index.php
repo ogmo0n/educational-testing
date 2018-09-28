@@ -85,7 +85,7 @@ if ($ok) {
         /**
          * Initial launch
          */
-			$action = 'intro';
+			$action = 'intro'; 
 		} 
 	} else if ($_SESSION['isTeacher'] == 1 || $_SESSION['isAdmin'] == 1 ) {
 
