@@ -1,6 +1,6 @@
 # educational-testing
 
-This is the body of code handed down to me used for student pre-tests and post-tests that I made to resemble the Canvas LMS.
+This is the body of code created by Martin Carruth used for student pre-tests and post-tests that I made to resemble the Canvas LMS.
 
 I created all styling, added pagination, and am responsible for all JavaScript/jQuery.
 
