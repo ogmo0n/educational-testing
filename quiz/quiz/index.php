@@ -422,7 +422,11 @@ if ($action == 'print_test1') {
 			 */
 			if (array_key_exists('individual', $_POST)) {
 				$_SESSION['count'] = $num; // array index by count
+<<<<<<< HEAD
 				$quesNumb = $_SESSION['numbers'][$_REQUEST['individual']]; 
+=======
+				$quesNumb = $_SESSION['numbers'][$_REQUEST['individual']];
+>>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 			}
 
 			/**
@@ -441,7 +445,7 @@ if ($action == 'print_test1') {
 			 * Determine if question contains an image. If so, retrieve it.
 			 */
 			if (strlen($_SESSION['questions'][$_SESSION['count']]['qpic']) > 1) { 
-				$image = '<img src="https://test.ecpi.net/pretest/'.$_SESSION['questions'][$_SESSION['count']]['qpic'].'" alt="'.$_SESSION['questions'][$_SESSION['count']]['qalt'].'" /><br />'; // add URL for src like <img src="https://test.school.net/pretest/'.$_SESSION[]"
+				$image = '<img src="'.$_SESSION['questions'][$_SESSION['count']]['qpic'].'" alt="'.$_SESSION['questions'][$_SESSION['count']]['qalt'].'" /><br />'; // add URL for src like <img src="https://test.school.net/pretest/'.$_SESSION[]"
 			} else {
 				$image = '';
 			}
@@ -507,7 +511,11 @@ if ($action == 'print_test1') {
 		    } else {
 		    	$unanswered = array_count_values($_SESSION['arrQuestion'])[0];
 		    }
+<<<<<<< HEAD
 
+=======
+			
+>>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 		    /**
 			 * HTML and JavaScript String Variables
 			 */
@@ -605,7 +613,10 @@ if ($action == 'print_test1') {
 
 		    // Add flagged questions to array where key equals index.
 		    $indexFlag = array_keys($_SESSION['flagged'], 1);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 		    $questCount = 0;
 		    $page .= "
 		    	<div class='window-wrapper'>
