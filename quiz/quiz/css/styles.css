@@ -17,8 +17,8 @@
  */
 
 sup { 
-    vertical-align: super;
-    font-size: smaller;
+	vertical-align: super;
+	font-size: smaller;
 }
 body {
 	font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
