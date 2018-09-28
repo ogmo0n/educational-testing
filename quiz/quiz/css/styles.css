@@ -146,7 +146,6 @@ input[type="submit"] {
 }
 #question_list {
 	height: 120px;
-<<<<<<< HEAD
 	list-style-type: none;
     margin: 0 0 13px;
  	min-width: 10em;
@@ -159,23 +158,11 @@ input[type="submit"] {
     position: absolute;
 }
 /* Uncomment to remove scrollbar */
-=======
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	list-style-type: none;
-    	margin: 0 0 13px;
-    	padding: 0 0 1px 20px;
-    	position: absolute;
- 	min-width: 10em;
-}
-/* Uncomment below if scrollbar is not desired */
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 /*#question_list::-webkit-scrollbar {
 	display: none;
 }*/
 #question_list li i.fa {
 	color: #595959; /* charcoal */
-<<<<<<< HEAD
     display: inline-block;
     font-style: normal;
     line-height: 1;
@@ -195,28 +182,6 @@ input[type="submit"] {
     text-rendering: optimizeLegibility;
 	text-transform: none !important;
     vertical-align: bottom;
-=======
-	margin-right: 4px;
-    	display: inline-block;
-   	font-style: normal;
-   	line-height: 1;
-}
-.icon {
-	color: #0D4BA0 !important; /*darker blue*/
-    	display: inline-block;
-    	vertical-align: bottom;
-    	line-height: 1;
-	font-size: .875rem; /* 14px */
-    	text-decoration: none !important;
-    	text-rendering: optimizeLegibility;
-	text-transform: none !important;
-	/* Properties to remove button styling */
-		background: none!important;
-		border: none !important; 
-		padding: 0 !important;
-		font: inherit;
-		cursor: pointer;
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 }
 .icon:hover,
 .icon.answered.currentQuestion:hover {
@@ -239,7 +204,6 @@ input[type="submit"] {
  */
 input.flag-question[type="checkbox"] {
 	-webkit-appearance: none;
-<<<<<<< HEAD
     -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
@@ -250,32 +214,16 @@ input.flag-question[type="checkbox"] {
 	margin: 3.5em 1em 0 0;
     position: absolute;
     width: 20px;
-=======
-    	-moz-appearance: none;
-    	appearance: none;
-	background: url(../images/answers_sprite.png) -48px top;
-    	cursor: pointer;
-    	position: absolute;
-	margin: 3.5em 1em 0 0;
-    	height: 16px;
-    	width: 20px;
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 }
 input.flag-question[type="checkbox"]:checked {
 	background-position: -48px -17px;
 }
 .small-flag {
 	background: url(../images/flagged_question.png) no-repeat;
-<<<<<<< HEAD
 	display: inline-block;
     height: 8px;
     padding: 0 4px 4px 0;
     width: 10px;
-=======
-    	height: 8px;
-    	width: 10px;
-    	padding: 0 4px 4px 0;
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 }
 .invisible {
 	visibility: hidden !important;
@@ -320,32 +268,20 @@ input.flag-question[type="checkbox"]:checked {
 }
 .previous:hover:not(:disabled), .next:hover:not(:disabled) {
 	background: #e8e8e8;
-<<<<<<< HEAD
     color: #2D3B45;
 	text-decoration: none;
-=======
-    	color: #2D3B45;
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 }
 .submit:hover:not(:disabled){
 	background: #008EE2;
-<<<<<<< HEAD
 	border-color: #0079C1;
     color: #fff;
 	text-decoration: none;
-=======
-    	color: #fff;
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 }
 .next.btnColor, .previous.btnColor, .submit.submitBtnColor {
 	background: #008EE2;
-<<<<<<< HEAD
 	border-color: #0079C1;
     color: #fff;
 	text-decoration: none;
-=======
-    	color: #fff;
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
 }
 
 
@@ -446,13 +382,8 @@ input.flag-question[type="checkbox"]:checked {
  	}
  	.question-container {
  		margin-right: 0;
-<<<<<<< HEAD
 	    max-width: 53.5em;
  		padding-right: 2em;
-=======
- 		padding-right: 2em;
-	    	max-width: 53.5em;
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
  	}
  	.window-wrapper {
 	    	margin: 1em 0;
@@ -474,22 +405,4 @@ input.flag-question[type="checkbox"]:checked {
  	.main-content, .my-form {
  		margin: auto;
  	}
-<<<<<<< HEAD
  }
-=======
- }
-
-/* CURRENT LAYOUT TIERS */
-/*
-	A) main-content div {
-		I) .my-form
-		II) div.second-container {
-			a) div.question-container {
-				1) div.input-table-container {}
-				2) div.buttons {}
-			}
-			b) div.box {}
-		}
-		III) div.window-wrapper {}
-	}
->>>>>>> 6ebac846d9b4509dc311477f33d52d451cc0686a
